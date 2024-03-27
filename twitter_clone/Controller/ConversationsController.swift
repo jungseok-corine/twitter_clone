@@ -1,5 +1,5 @@
 //
-//  FeedController.swift
+//  ConversationsController.swift
 //  twitter_clone
 //
 //  Created by 오정석 on 27/3/2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeedController: UIViewController {
+class ConversationsController: UIViewController {
     
     // MARK: - Properties
     
@@ -16,9 +16,7 @@ class FeedController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .blue
-
+        view.backgroundColor = .white
     }
   
     // MARK: - Helpers

@@ -18,6 +18,7 @@ class MainTabController: UITabBarController {
         super.viewDidLoad()
 
         view.backgroundColor = .systemPink
+        configureViewControllers()
     }
   
     // MARK: - Helpers
@@ -25,6 +26,20 @@ class MainTabController: UITabBarController {
     
     func configureViewControllers() {
         
+        let feed = FeedController()
+        feed.tabBarItem.image = UIImage(named: "home_unselected")
+        
+        let explore = ExploreController()
+        explore.tabBarItem.image = UIImage(named: "search_unselected")
+        
+        let notifications = NotificationController()
+        notifications.tabBarItem.image = UIImage(named: "like_unselected")
+        
+        let conversations = ConversationsController()
+        conversations.tabBarItem.image = UIImage(named: "like_unselected")
+        
+        
+        viewControllers = [feed, explore, notifications, conversations]
     }
 
 
