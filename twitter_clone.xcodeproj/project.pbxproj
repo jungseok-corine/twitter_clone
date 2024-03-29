@@ -18,6 +18,7 @@
 		9954B7092BB41D580026BE22 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954B7082BB41D580026BE22 /* ExploreController.swift */; };
 		9954B70B2BB41D6A0026BE22 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954B70A2BB41D6A0026BE22 /* NotificationController.swift */; };
 		9954B70D2BB41D7E0026BE22 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954B70C2BB41D7E0026BE22 /* ConversationsController.swift */; };
+		99FD78622BB6AEA300CA10F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD78612BB6AEA300CA10F1 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9954B7082BB41D580026BE22 /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
 		9954B70A2BB41D6A0026BE22 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		9954B70C2BB41D7E0026BE22 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
+		99FD78612BB6AEA300CA10F1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		9954B6FC2BB3D8A40026BE22 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				99FD78612BB6AEA300CA10F1 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9954B6F02BB3D7370026BE22 /* twitter_clone.xcdatamodeld in Sources */,
+				99FD78622BB6AEA300CA10F1 /* Extensions.swift in Sources */,
 				9954B6E62BB3D7370026BE22 /* AppDelegate.swift in Sources */,
 				9954B70D2BB41D7E0026BE22 /* ConversationsController.swift in Sources */,
 				9954B7072BB3DE340026BE22 /* FeedController.swift in Sources */,
