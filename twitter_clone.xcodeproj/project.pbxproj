@@ -20,6 +20,7 @@
 		9954B70D2BB41D7E0026BE22 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954B70C2BB41D7E0026BE22 /* ConversationsController.swift */; };
 		9999A0FC2BB7BE1000E4B1F5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9999A0FB2BB7BE1000E4B1F5 /* LoginController.swift */; };
 		9999A0FE2BB7BF7B00E4B1F5 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9999A0FD2BB7BF7B00E4B1F5 /* RegistrationController.swift */; };
+		99BD5C432BBAA67B00585987 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BD5C422BBAA67B00585987 /* Utilities.swift */; };
 		99FD78622BB6AEA300CA10F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD78612BB6AEA300CA10F1 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		9954B70C2BB41D7E0026BE22 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		9999A0FB2BB7BE1000E4B1F5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		9999A0FD2BB7BF7B00E4B1F5 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		99BD5C422BBAA67B00585987 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		99FD78612BB6AEA300CA10F1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				99FD78612BB6AEA300CA10F1 /* Extensions.swift */,
+				99BD5C422BBAA67B00585987 /* Utilities.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				9954B70D2BB41D7E0026BE22 /* ConversationsController.swift in Sources */,
 				9954B7072BB3DE340026BE22 /* FeedController.swift in Sources */,
 				9954B70B2BB41D6A0026BE22 /* NotificationController.swift in Sources */,
+				99BD5C432BBAA67B00585987 /* Utilities.swift in Sources */,
 				9999A0FE2BB7BF7B00E4B1F5 /* RegistrationController.swift in Sources */,
 				9954B7052BB3DB7F0026BE22 /* MainTabController.swift in Sources */,
 				9954B6E82BB3D7370026BE22 /* SceneDelegate.swift in Sources */,
