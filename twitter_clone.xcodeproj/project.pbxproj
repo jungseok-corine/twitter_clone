@@ -18,6 +18,7 @@
 		9954B7092BB41D580026BE22 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954B7082BB41D580026BE22 /* ExploreController.swift */; };
 		9954B70B2BB41D6A0026BE22 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954B70A2BB41D6A0026BE22 /* NotificationController.swift */; };
 		9954B70D2BB41D7E0026BE22 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954B70C2BB41D7E0026BE22 /* ConversationsController.swift */; };
+		996650A42BBEA6F1007D1D55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 996650A32BBEA6F1007D1D55 /* GoogleService-Info.plist */; };
 		9999A0FC2BB7BE1000E4B1F5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9999A0FB2BB7BE1000E4B1F5 /* LoginController.swift */; };
 		9999A0FE2BB7BF7B00E4B1F5 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9999A0FD2BB7BF7B00E4B1F5 /* RegistrationController.swift */; };
 		99BD5C432BBAA67B00585987 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BD5C422BBAA67B00585987 /* Utilities.swift */; };
@@ -38,6 +39,7 @@
 		9954B7082BB41D580026BE22 /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
 		9954B70A2BB41D6A0026BE22 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		9954B70C2BB41D7E0026BE22 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
+		996650A32BBEA6F1007D1D55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9999A0FB2BB7BE1000E4B1F5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		9999A0FD2BB7BF7B00E4B1F5 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		99BD5C422BBAA67B00585987 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				9954B6EB2BB3D7370026BE22 /* Main.storyboard */,
 				9954B6F12BB3D7380026BE22 /* Assets.xcassets */,
 				9954B6F32BB3D7380026BE22 /* LaunchScreen.storyboard */,
+				996650A32BBEA6F1007D1D55 /* GoogleService-Info.plist */,
 				9954B6F62BB3D7380026BE22 /* Info.plist */,
 				9954B6EE2BB3D7370026BE22 /* twitter_clone.xcdatamodeld */,
 			);
@@ -194,6 +197,9 @@
 				Base,
 			);
 			mainGroup = 9954B6D92BB3D7370026BE22;
+			packageReferences = (
+				996650A52BBEA7BC007D1D55 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 9954B6E32BB3D7370026BE22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -209,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9954B6F22BB3D7380026BE22 /* Assets.xcassets in Resources */,
+				996650A42BBEA6F1007D1D55 /* GoogleService-Info.plist in Resources */,
 				9954B6F52BB3D7380026BE22 /* Base in Resources */,
 				9954B6ED2BB3D7370026BE22 /* Base in Resources */,
 			);
@@ -463,6 +470,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		996650A52BBEA7BC007D1D55 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.23.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCVersionGroup section */
 		9954B6EE2BB3D7370026BE22 /* twitter_clone.xcdatamodeld */ = {
