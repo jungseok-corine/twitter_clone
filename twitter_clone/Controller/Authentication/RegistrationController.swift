@@ -54,6 +54,7 @@ class RegistrationController: UIViewController {
     
     private let passwordTextField: UITextField = {
         let tf = Utilities().textField(withPlaceholder: "Password")
+        tf.textContentType = .newPassword
         tf.isSecureTextEntry = true
         return tf
     }()
