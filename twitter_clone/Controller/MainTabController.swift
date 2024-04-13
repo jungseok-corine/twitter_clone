@@ -33,6 +33,7 @@ class MainTabController: UITabBarController {
     
     // 로그인 했는지 안했는지 확인
     func authenticateUserAndConfigureUI() {
+        // 로그인 == nil
         if Auth.auth().currentUser == nil {
             DispatchQueue.main.async {
                 let nav = UINavigationController(rootViewController: LoginController())
@@ -48,6 +49,7 @@ class MainTabController: UITabBarController {
     func logUserOut() {
         do {
             try Auth.auth().signOut()
+            print("DEBUG: Did log user out..")
         } catch let error {
             print("DEBUG: Failed to sign out with error \(error.localizedDescription)")
         }
