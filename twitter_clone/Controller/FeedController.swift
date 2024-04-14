@@ -11,6 +11,12 @@ class FeedController: UIViewController {
     
     // MARK: - Properties
     
+    var user: User? {
+        didSet{
+            print("DEBUG: Did set user in feed controller..")
+        }
+    }
+    
     // MARK: - Lifecycle
 
 

@@ -9,8 +9,17 @@ import UIKit
 import Firebase
 
 class MainTabController: UITabBarController {
-
+    
     // MARK: - Properties
+    
+    var user: User? {
+        didSet {
+            guard let nav = viewControllers?[0] as? UINavigationController else { return }
+            guard let feed = nav.viewControllers.first as? FeedController else { return }
+            
+            feed.user = user
+        }
+    }
     
     let actionButton : UIButton = {
         let button = UIButton(type: .system)
@@ -21,18 +30,20 @@ class MainTabController: UITabBarController {
         return button
     }()
     // MARK: - Lifecycle
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        logUserOut()
+        //        logUserOut()
         authenticateUserAndConfigureUI()
     }
     
     // MARK: - API
     
     func fetchUser() {
-        UserService.shared.fetchUser()
+        UserService.shared.fetchUser { user in
+            self.user = user
+        }
     }
     
     // 로그인 했는지 안했는지 확인
@@ -59,7 +70,7 @@ class MainTabController: UITabBarController {
             print("DEBUG: Failed to sign out with error \(error.localizedDescription)")
         }
     }
-  
+    
     // MARK: - Selectors
     
     @objc func actionButtonTapped() {
@@ -92,12 +103,12 @@ class MainTabController: UITabBarController {
         
         viewControllers = [nav1, nav2, nav3, nav4]
     }
-
+    
     func templateNavigationController(image: UIImage?, rootViewController: UIViewController) -> UINavigationController {
         let nav = UINavigationController(rootViewController: rootViewController)
         nav.tabBarItem.image = image
         nav.navigationBar.barTintColor = .white
         return nav
     }
-    
 }
+
