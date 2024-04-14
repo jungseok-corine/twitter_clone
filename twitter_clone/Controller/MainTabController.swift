@@ -31,6 +31,10 @@ class MainTabController: UITabBarController {
     
     // MARK: - API
     
+    func fetchUser() {
+        UserService.shared.fetchUser()
+    }
+    
     // 로그인 했는지 안했는지 확인
     func authenticateUserAndConfigureUI() {
         // 로그인 == nil
@@ -43,6 +47,7 @@ class MainTabController: UITabBarController {
         } else {
             configureViewControllers()
             configureUI()
+            fetchUser()
         }
     }
     
