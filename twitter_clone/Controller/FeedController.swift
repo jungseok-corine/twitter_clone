@@ -24,8 +24,17 @@ class FeedController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        fetchTweets()
     }
-  
+    
+    // MARK: - API
+    
+    func fetchTweets() {
+        TweetService.shared.fetchTweets { tweets in
+            print("DEBUG: Tweets are \(tweets)")
+        }
+    }
+
     // MARK: - Helpers
     func configureUI() {
         view.backgroundColor = .white
@@ -50,4 +59,6 @@ class FeedController: UIViewController {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
     }
+    
+    
 }
