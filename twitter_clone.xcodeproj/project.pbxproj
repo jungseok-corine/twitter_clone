@@ -28,6 +28,7 @@
 		99A4DE302BCBB96500D41F3E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A4DE2F2BCBB96500D41F3E /* UserService.swift */; };
 		99A4DE322BCBC16800D41F3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A4DE312BCBC16800D41F3E /* User.swift */; };
 		99BD5C432BBAA67B00585987 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BD5C422BBAA67B00585987 /* Utilities.swift */; };
+		99C448362BD0DD1000FC06EF /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C448352BD0DD1000FC06EF /* TweetCell.swift */; };
 		99DB6FD42BC824880082BEF9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB6FD32BC824880082BEF9 /* AuthService.swift */; };
 		99E26C612BCE7BAB0031BFBA /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E26C602BCE7BAB0031BFBA /* UploadTweetController.swift */; };
 		99FD78622BB6AEA300CA10F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD78612BB6AEA300CA10F1 /* Extensions.swift */; };
@@ -60,6 +61,7 @@
 		99A4DE2F2BCBB96500D41F3E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		99A4DE312BCBC16800D41F3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		99BD5C422BBAA67B00585987 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		99C448352BD0DD1000FC06EF /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		99DB6FD32BC824880082BEF9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		99E26C602BCE7BAB0031BFBA /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
 		99FD78612BB6AEA300CA10F1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				995DC7F32BCF96BE00058E39 /* CaptionTextView.swift */,
+				99C448352BD0DD1000FC06EF /* TweetCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				99BD5C432BBAA67B00585987 /* Utilities.swift in Sources */,
 				9999A0FE2BB7BF7B00E4B1F5 /* RegistrationController.swift in Sources */,
 				9954B7052BB3DB7F0026BE22 /* MainTabController.swift in Sources */,
+				99C448362BD0DD1000FC06EF /* TweetCell.swift in Sources */,
 				9954B6E82BB3D7370026BE22 /* SceneDelegate.swift in Sources */,
 				99A4DE302BCBB96500D41F3E /* UserService.swift in Sources */,
 				9954B7092BB41D580026BE22 /* ExploreController.swift in Sources */,
