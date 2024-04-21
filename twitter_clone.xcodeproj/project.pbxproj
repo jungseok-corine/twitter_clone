@@ -25,6 +25,7 @@
 		995DC7F82BCFCBB500058E39 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995DC7F72BCFCBB500058E39 /* Tweet.swift */; };
 		996650A42BBEA6F1007D1D55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 996650A32BBEA6F1007D1D55 /* GoogleService-Info.plist */; };
 		996F64AE2BD5147C00F6B487 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F64AD2BD5147C00F6B487 /* ProfileController.swift */; };
+		996F64B02BD51ABE00F6B487 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F64AF2BD51ABE00F6B487 /* ProfileHeader.swift */; };
 		9999A0FC2BB7BE1000E4B1F5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9999A0FB2BB7BE1000E4B1F5 /* LoginController.swift */; };
 		9999A0FE2BB7BF7B00E4B1F5 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9999A0FD2BB7BF7B00E4B1F5 /* RegistrationController.swift */; };
 		99A4DE302BCBB96500D41F3E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A4DE2F2BCBB96500D41F3E /* UserService.swift */; };
@@ -60,6 +61,7 @@
 		995DC7F72BCFCBB500058E39 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		996650A32BBEA6F1007D1D55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		996F64AD2BD5147C00F6B487 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		996F64AF2BD51ABE00F6B487 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		9999A0FB2BB7BE1000E4B1F5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		9999A0FD2BB7BF7B00E4B1F5 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		99A4DE2F2BCBB96500D41F3E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				995DC7F32BCF96BE00058E39 /* CaptionTextView.swift */,
 				99C448352BD0DD1000FC06EF /* TweetCell.swift */,
+				996F64AF2BD51ABE00F6B487 /* ProfileHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				99E26C612BCE7BAB0031BFBA /* UploadTweetController.swift in Sources */,
 				99A4DE322BCBC16800D41F3E /* User.swift in Sources */,
 				995DC7F42BCF96BE00058E39 /* CaptionTextView.swift in Sources */,
+				996F64B02BD51ABE00F6B487 /* ProfileHeader.swift in Sources */,
 				9954B70D2BB41D7E0026BE22 /* ConversationsController.swift in Sources */,
 				996F64AE2BD5147C00F6B487 /* ProfileController.swift in Sources */,
 				9954B7072BB3DE340026BE22 /* FeedController.swift in Sources */,

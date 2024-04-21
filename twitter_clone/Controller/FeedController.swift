@@ -87,7 +87,6 @@ extension FeedController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        
     }
 }
 
