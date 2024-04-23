@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 enum ProfileFilterOptions: Int, CaseIterable {
     case tweets
     case replies
@@ -32,6 +33,16 @@ struct ProfileHeaderViewModel {
     var follwingString: NSAttributedString? {
         return attributedText(withValue: 2, text: "following")
 
+    }
+    
+    var actionButtonTitle: String {
+        // if user is current user then set to edit profile
+        // else figure out follwing/not following
+        if user.isCurrentUser {
+            return "Edit Profile"
+        } else {
+            return "Follow"
+        }
     }
     
     init(user: User) {

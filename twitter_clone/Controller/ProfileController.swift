@@ -30,7 +30,9 @@ class ProfileController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            configureCollectionView()
+        configureCollectionView()
+        
+        print("DEBUG: User is \(user.username)")
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -40,7 +42,7 @@ class ProfileController: UICollectionViewController {
     
     
     // MARK: - Helpers
-
+    
     func configureCollectionView() {
         collectionView.backgroundColor = .white
         collectionView.contentInsetAdjustmentBehavior = .never
@@ -50,7 +52,7 @@ class ProfileController: UICollectionViewController {
     }
     
     // MARK: - Selectors
-
+    
 }
 
 // MARK: - UICollectionViewDataSource

@@ -11,9 +11,7 @@ class ProfileHeader: UICollectionReusableView {
     // MARK: - Properties
     
     var user: User? {
-        didSet {
-            
-        }
+        didSet { configure() }
     }
     
     private let filterBar = ProfileFilterView()
@@ -182,8 +180,12 @@ class ProfileHeader: UICollectionReusableView {
 
     func configure() {
         guard let user = user else { return }
+        
         let viewModel = ProfileHeaderViewModel(user: user)
         
+        profileImageView.sd_setImage(with: user.profileImageUrl)
+        
+        editProfileFollowButton.setTitle(viewModel.actionButtonTitle, for: .normal)
         followingLabel.attributedText = viewModel.follwingString
         followersLabel.attributedText = viewModel.followerString
 
