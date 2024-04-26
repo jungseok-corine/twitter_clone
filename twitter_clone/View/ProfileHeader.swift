@@ -67,7 +67,6 @@ class ProfileHeader: UICollectionReusableView {
     private let fullnameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.text = "Ben"
         return label
     }()
     
@@ -75,7 +74,6 @@ class ProfileHeader: UICollectionReusableView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .lightGray
-        label.text = "@venom"
         return label
     }()
     
@@ -195,6 +193,8 @@ class ProfileHeader: UICollectionReusableView {
         followingLabel.attributedText = viewModel.follwingString
         followersLabel.attributedText = viewModel.followerString
 
+        fullnameLabel.text = user.fullname
+        usernameLable.text = viewModel.usernameText
     }
     
 }
