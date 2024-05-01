@@ -51,4 +51,13 @@ struct UserService {
             REF_USER_FOLLWERS.child(uid).child(currentUid).removeValue(completionBlock: completion)
         }
     }
+    
+    func checkIfUserIsFollwed(uid: String, completion: @escaping(Bool) -> Void) {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        
+        REF_USER_FOLLWING.child(currentUid).child(uid).observeSingleEvent(of: .value) { snapshot in
+            print("DEBUG: User is follwed is \(snapshot.exists())")
+            completion(snapshot.exists())
+        }
+    }
 }
