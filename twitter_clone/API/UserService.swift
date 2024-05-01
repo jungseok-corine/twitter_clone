@@ -7,6 +7,8 @@
 
 import Firebase
 
+typealias DatabaseCompletion = ((Error?, DatabaseReference) -> Void)
+
 struct UserService {
     static let shared = UserService()
     
@@ -34,14 +36,19 @@ struct UserService {
         }
     }
     
-    func followUser(uid: String, completion: @escaping(Error?, DatabaseReference) -> Void) {
+    func followUser(uid: String, completion: @escaping(DatabaseCompletion)) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         
         REF_USER_FOLLWING.child(currentUid).updateChildValues([uid:1]) { (err, ref) in
             REF_USER_FOLLWERS.child(uid).updateChildValues([currentUid: 1], withCompletionBlock: completion)
         }
-            
-        print("DEBUG: Current uid \(currentUid) started following")
-        print("DEBUG: Uid \(uid) gained \(currentUid) as a follower")
+    }
+    
+    func unfollwerUser(uid: String, completion: @escaping(DatabaseCompletion)) {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        
+        REF_USER_FOLLWING.child(currentUid).child(uid).removeValue { err, ref in
+            REF_USER_FOLLWERS.child(uid).child(currentUid).removeValue(completionBlock: completion)
+        }
     }
 }
