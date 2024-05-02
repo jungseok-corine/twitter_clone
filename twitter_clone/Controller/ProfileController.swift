@@ -38,6 +38,7 @@ class ProfileController: UICollectionViewController {
         fetchTweets()
         configureCollectionView()
         checkIfUserIsFollwed()
+        fetchUserStats()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,6 +58,13 @@ class ProfileController: UICollectionViewController {
     func checkIfUserIsFollwed() {
         UserService.shared.checkIfUserIsFollwed(uid: user.uid) { isFollwed in
             self.user.isFollowed = isFollwed
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func fetchUserStats() {
+        UserService.shared.fetchUserStats(uid: user.uid) { stats in
+            self.user.stats = stats
             self.collectionView.reloadData()
         }
     }
