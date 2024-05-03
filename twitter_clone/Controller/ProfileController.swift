@@ -7,8 +7,8 @@
 
 import UIKit
 
-private let reuseIdentifer = "TweetCell"
-private let headerIdentifer = "ProfileHeader"
+private let reuseIdentifier = "TweetCell"
+private let headerIdentifier = "ProfileHeader"
 
 
 class ProfileController: UICollectionViewController {
@@ -75,8 +75,8 @@ class ProfileController: UICollectionViewController {
         collectionView.backgroundColor = .white
         collectionView.contentInsetAdjustmentBehavior = .never
         
-        collectionView.register(TweetCell.self, forCellWithReuseIdentifier: reuseIdentifer)
-        collectionView.register(ProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerIdentifer)
+        collectionView.register(TweetCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.register(ProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerIdentifier)
     }
 }
 
@@ -88,7 +88,7 @@ extension ProfileController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifer, for: indexPath) as! TweetCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TweetCell
         cell.tweet = tweets[indexPath.row]
         return cell
     }
@@ -98,7 +98,7 @@ extension ProfileController {
 
 extension ProfileController {
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerIdentifer, for: indexPath) as! ProfileHeader
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerIdentifier, for: indexPath) as! ProfileHeader
         header.user = user
         header.delegate = self
         return header
