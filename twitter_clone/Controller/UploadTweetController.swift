@@ -43,6 +43,7 @@ class UploadTweetController: UIViewController {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .lightGray
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -81,7 +82,7 @@ class UploadTweetController: UIViewController {
     
     @objc func handleUploadTweet() {
         guard let caption = captionTextView.text else { return }
-        TweetService.shared.uploadTweet(caption: caption) { (error, ref) in
+        TweetService.shared.uploadTweet(caption: caption, type: config) { (error, ref) in
             if let error = error{
                 print("DEBUG: Failed to upload tweet with error \(error.localizedDescription)")
                 return
@@ -106,7 +107,6 @@ class UploadTweetController: UIViewController {
         
         let stack = UIStackView(arrangedSubviews: [replyLabel, imageCaptionStack])
         stack.axis = .vertical
-        stack.alignment = .leading
         stack.spacing = 12
         
         view.addSubview(stack)
