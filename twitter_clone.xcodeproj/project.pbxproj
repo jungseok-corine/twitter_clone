@@ -43,6 +43,7 @@
 		99DB6FD42BC824880082BEF9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB6FD32BC824880082BEF9 /* AuthService.swift */; };
 		99E26C612BCE7BAB0031BFBA /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E26C602BCE7BAB0031BFBA /* UploadTweetController.swift */; };
 		99F5AEC02BE9F8E800AED34B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AEBF2BE9F8E800AED34B /* Notification.swift */; };
+		99F5AEC22BE9FAA100AED34B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AEC12BE9FAA100AED34B /* NotificationService.swift */; };
 		99FD78622BB6AEA300CA10F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD78612BB6AEA300CA10F1 /* Extensions.swift */; };
 		99FF030E2BE48627007B92E5 /* TweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF030D2BE48627007B92E5 /* TweetController.swift */; };
 		99FF03102BE487DA007B92E5 /* TweetHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF030F2BE487DA007B92E5 /* TweetHeader.swift */; };
@@ -90,6 +91,7 @@
 		99DB6FD32BC824880082BEF9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		99E26C602BCE7BAB0031BFBA /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
 		99F5AEBF2BE9F8E800AED34B /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		99F5AEC12BE9FAA100AED34B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		99FD78612BB6AEA300CA10F1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		99FF030D2BE48627007B92E5 /* TweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetController.swift; sourceTree = "<group>"; };
 		99FF030F2BE487DA007B92E5 /* TweetHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetHeader.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				99DB6FD32BC824880082BEF9 /* AuthService.swift */,
 				99A4DE2F2BCBB96500D41F3E /* UserService.swift */,
 				995DC7F52BCFA7F200058E39 /* TweetService.swift */,
+				99F5AEC12BE9FAA100AED34B /* NotificationService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				995DC7F62BCFA7F200058E39 /* TweetService.swift in Sources */,
 				99FD78622BB6AEA300CA10F1 /* Extensions.swift in Sources */,
 				9954B6E62BB3D7370026BE22 /* AppDelegate.swift in Sources */,
+				99F5AEC22BE9FAA100AED34B /* NotificationService.swift in Sources */,
 				990362E02BC6B9A700078AB9 /* Constants.swift in Sources */,
 				99E26C612BCE7BAB0031BFBA /* UploadTweetController.swift in Sources */,
 				99A4DE322BCBC16800D41F3E /* User.swift in Sources */,
