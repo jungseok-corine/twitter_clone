@@ -9,6 +9,7 @@ import UIKit
 
 protocol NotificationCellDelegate: class {
     func didTapProfileImage(_ cell : NotificationCell)
+    func didTapFollow(_ cell: NotificationCell)
 }
 
 class NotificationCell: UITableViewCell {
@@ -36,6 +37,17 @@ class NotificationCell: UITableViewCell {
         return iv
     }()
     
+    private lazy var followButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Loading", for: .normal)
+        button.setTitleColor(.twitterBlue, for: .normal)
+        button.backgroundColor = .white
+        button.layer.borderColor = UIColor.twitterBlue.cgColor
+        button.layer.borderWidth = 2
+        button.addTarget(self, action: #selector(handleFollowTapped), for: .touchUpInside)
+        return button
+    }()
+    
     let notificationLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
@@ -56,6 +68,12 @@ class NotificationCell: UITableViewCell {
         addSubview(stack)
         stack.centerY(inView: self, leftAnchor: leftAnchor, paddingLeft: 12)
         stack.anchor(right: rightAnchor, paddingRight: 12)
+        
+        addSubview(followButton)
+        followButton.centerY(inView: self)
+        followButton.setDimensions(width: 92, height: 32)
+        followButton.layer.cornerRadius = 32 / 2
+        followButton.anchor(right: rightAnchor, paddingRight: 12)
     }
     
     required init?(coder: NSCoder) {
@@ -68,6 +86,10 @@ class NotificationCell: UITableViewCell {
         delegate?.didTapProfileImage(self)
     }
 
+    @objc func handleFollowTapped() {
+        delegate?.didTapFollow(self)
+    }
+    
     // MARK: - Helpers
     
     func configure() {
@@ -76,5 +98,8 @@ class NotificationCell: UITableViewCell {
         
         profileImageView.sd_setImage(with: viewModel.profileImageUrl)
         notificationLabel.attributedText = viewModel.notificationText
+        
+        followButton.isHidden = viewModel.shouldHideFollowButton
+        followButton.setTitle(viewModel.followButtonText, for: .normal)
     }
 }

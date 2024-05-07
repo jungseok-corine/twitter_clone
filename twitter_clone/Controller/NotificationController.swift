@@ -18,8 +18,8 @@ class NotificationController: UITableViewController {
     }
     
     // MARK: - Lifecycle
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -31,24 +31,34 @@ class NotificationController: UITableViewController {
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.barStyle = .default
     }
-  
+    
     // MARK: - API
     
     func fetchNotifications() {
         NotificationService.shared.fetchNotifications { notifications in
             self.notifications = notifications
+            
+            for (index, notification) in notifications.enumerated() {
+                if case .follow = notification.type {
+                    let user = notification.user
+                    
+                    UserService.shared.checkIfUserIsFollwed(uid: user.uid) { isFollwed in
+                        self.notifications[index].user.isFollowed = isFollwed
+                    }
+                }
+            }
         }
     }
 
-    // MARK: - Helpers
-    func configureUI() {
-        view.backgroundColor = .white
-        navigationItem.title = "Notifications"
-        
-        tableView.register(NotificationCell.self, forCellReuseIdentifier: reuseIdentifier)
-        tableView.rowHeight = 60
-        tableView.separatorStyle = .none
-    }
+// MARK: - Helpers
+func configureUI() {
+    view.backgroundColor = .white
+    navigationItem.title = "Notifications"
+    
+    tableView.register(NotificationCell.self, forCellReuseIdentifier: reuseIdentifier)
+    tableView.rowHeight = 60
+    tableView.separatorStyle = .none
+}
 }
 
 // MARK: - UITableViewDatasource
@@ -84,6 +94,10 @@ extension NotificationController {
 // MARK: - NotificationCellDelegate
 
 extension NotificationController: NotificationCellDelegate {
+    func didTapFollow(_ cell: NotificationCell) {
+        print("DEBUG: Handle follow tap...")
+    }
+    
     func didTapProfileImage(_ cell: NotificationCell) {
         guard let user = cell.notification?.user else { return }
         
