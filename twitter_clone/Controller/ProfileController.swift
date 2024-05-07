@@ -129,7 +129,7 @@ extension ProfileController: ProfileHeaderDelegate {
         }
                 
         if user.isFollowed {
-            UserService.shared.unfollwerUser(uid: user.uid) { (ref, err) in
+            UserService.shared.unfollowUser(uid: user.uid) { (ref, err) in
                 self.user.isFollowed = false
                 self.collectionView.reloadData()
             }

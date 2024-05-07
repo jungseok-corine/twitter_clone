@@ -44,7 +44,7 @@ struct UserService {
         }
     }
     
-    func unfollwerUser(uid: String, completion: @escaping(DatabaseCompletion)) {
+    func unfollowUser(uid: String, completion: @escaping(DatabaseCompletion)) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         
         REF_USER_FOLLWING.child(currentUid).child(uid).removeValue { err, ref in
