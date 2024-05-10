@@ -11,6 +11,7 @@ class EditProfileController: UITableViewController {
     // MARK: - Properties
     
     private let user: User
+    private lazy var headerView = EditProfileHeader(user: user)
     
     // MARK: - Lifecycle
     
@@ -27,6 +28,7 @@ class EditProfileController: UITableViewController {
         super.viewDidLoad()
         
         configureNavigationBar()
+        configureTableView()
     }
     
     // MARK: - Selectors
@@ -41,10 +43,16 @@ class EditProfileController: UITableViewController {
     
     // MARK: - API
     
+    
+    
     // MARK: - Helpers
 
     func configureNavigationBar() {
-        navigationController?.navigationBar.barTintColor = .twitterBlue
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .twitterBlue
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.tintColor = .white
@@ -57,7 +65,18 @@ class EditProfileController: UITableViewController {
         
         navigationItem.rightBarButtonItem?.isEnabled = false
     }
+    
+    func configureTableView() {
+        tableView.tableHeaderView = headerView
+        headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 180)
+        tableView.tableFooterView = UIView()
+        
+        headerView.delegate = self
+    }
+}
 
-
-
+extension EditProfileController: EditProfileHeaderDelegate {
+    func didTapChangeProfilePhoto() {
+        
+    }
 }
