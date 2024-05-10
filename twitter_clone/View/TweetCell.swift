@@ -38,7 +38,7 @@ class TweetCell: UICollectionViewCell {
         return iv
     }()
     
-    private let replyLable: UILabel = {
+    private let replyLabel: UILabel = {
         let label = UILabel()
         label.textColor = .lightGray
         label.font = UIFont.systemFont(ofSize: 12)
@@ -107,7 +107,7 @@ class TweetCell: UICollectionViewCell {
         imageCaptionStack.spacing = 12
         imageCaptionStack.alignment = .leading
         
-        let stack = UIStackView(arrangedSubviews: [replyLable, imageCaptionStack])
+        let stack = UIStackView(arrangedSubviews: [replyLabel, imageCaptionStack])
         stack.axis = .vertical
         stack.spacing = 8
         stack.distribution = .fillProportionally
@@ -171,8 +171,8 @@ class TweetCell: UICollectionViewCell {
         likeButton.tintColor = viewModel.likeButtonTintColor
         likeButton.setImage(viewModel.likeButtonImage, for: .normal)
         
-        replyLable.isHidden = viewModel.shouldHideReplyLabel
-        replyLable.text = viewModel.replyText
+        replyLabel.isHidden = viewModel.shouldHideReplyLabel
+        replyLabel.text = viewModel.replyText
     }
 }
 
