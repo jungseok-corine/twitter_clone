@@ -15,6 +15,8 @@
 		991EEDF72BEE163900A71B78 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991EEDF62BEE163900A71B78 /* EditProfileController.swift */; };
 		991EEDFA2BEE198800A71B78 /* EditProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991EEDF92BEE198800A71B78 /* EditProfileHeader.swift */; };
 		9921306F2BE1E40A009CEED5 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9921306E2BE1E40A009CEED5 /* UserCell.swift */; };
+		993C76E12BF0EEA10039996A /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C76E02BF0EEA00039996A /* EditProfileViewModel.swift */; };
+		993C76E32BF0EEF00039996A /* EditProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C76E22BF0EEF00039996A /* EditProfileCell.swift */; };
 		9944FD532BE67FBB002FD230 /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FD522BE67FBB002FD230 /* UploadTweetViewModel.swift */; };
 		9954B6E62BB3D7370026BE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954B6E52BB3D7370026BE22 /* AppDelegate.swift */; };
 		9954B6E82BB3D7370026BE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954B6E72BB3D7370026BE22 /* SceneDelegate.swift */; };
@@ -65,6 +67,8 @@
 		991EEDF62BEE163900A71B78 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		991EEDF92BEE198800A71B78 /* EditProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileHeader.swift; sourceTree = "<group>"; };
 		9921306E2BE1E40A009CEED5 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		993C76E02BF0EEA00039996A /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		993C76E22BF0EEF00039996A /* EditProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileCell.swift; sourceTree = "<group>"; };
 		9944FD522BE67FBB002FD230 /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
 		9954B6E22BB3D7370026BE22 /* twitter_clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twitter_clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9954B6E52BB3D7370026BE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 				996F64B12BD53BB500F6B487 /* ProfileFilterView.swift */,
 				996F64B32BD53D5000F6B487 /* ProfileFilterCell.swift */,
 				991EEDF92BEE198800A71B78 /* EditProfileHeader.swift */,
+				993C76E22BF0EEF00039996A /* EditProfileCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 				9944FD522BE67FBB002FD230 /* UploadTweetViewModel.swift */,
 				991E33BF2BE8B01E00FB2872 /* ActionSheetViewModel.swift */,
 				99F5AEC52BEA2C2F00AED34B /* NotificationViewModel.swift */,
+				993C76E02BF0EEA00039996A /* EditProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -397,6 +403,7 @@
 				990362E02BC6B9A700078AB9 /* Constants.swift in Sources */,
 				99E26C612BCE7BAB0031BFBA /* UploadTweetController.swift in Sources */,
 				99A4DE322BCBC16800D41F3E /* User.swift in Sources */,
+				993C76E32BF0EEF00039996A /* EditProfileCell.swift in Sources */,
 				991EEDF72BEE163900A71B78 /* EditProfileController.swift in Sources */,
 				991E33BE2BE8A61E00FB2872 /* ActionSheetCell.swift in Sources */,
 				995DC7F42BCF96BE00058E39 /* CaptionTextView.swift in Sources */,
@@ -417,6 +424,7 @@
 				9921306F2BE1E40A009CEED5 /* UserCell.swift in Sources */,
 				9954B7052BB3DB7F0026BE22 /* MainTabController.swift in Sources */,
 				99C448362BD0DD1000FC06EF /* TweetCell.swift in Sources */,
+				993C76E12BF0EEA10039996A /* EditProfileViewModel.swift in Sources */,
 				9954B6E82BB3D7370026BE22 /* SceneDelegate.swift in Sources */,
 				99A4DE302BCBB96500D41F3E /* UserService.swift in Sources */,
 				9954B7092BB41D580026BE22 /* ExploreController.swift in Sources */,

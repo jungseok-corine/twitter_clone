@@ -12,6 +12,7 @@ protocol EditProfileHeaderDelegate: class {
 }
 
 class EditProfileHeader: UIView {
+    
     // MARK: - Properties
 
     private let user: User
