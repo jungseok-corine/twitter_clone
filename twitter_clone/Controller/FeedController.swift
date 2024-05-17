@@ -42,6 +42,12 @@ class FeedController: UICollectionViewController {
         fetchTweets()
     }
     
+    @objc func handleProfileImageTap() {
+        guard let user = user else { return }
+        let controller = ProfileController(user: user)
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
     // MARK: - API
     
     func fetchTweets() {
@@ -50,8 +56,6 @@ class FeedController: UICollectionViewController {
             // 트윗들을 타임스탬프 시간대로 정렬
             self.tweets = tweets.sorted(by: { $0.timestamp > $1.timestamp })
             self.checkIfUserLikedTweets()
-            
-
             
             self.collectionView.refreshControl?.endRefreshing()
         }
@@ -94,9 +98,15 @@ class FeedController: UICollectionViewController {
         profileImageView.layer.cornerRadius = 32 / 2
         profileImageView.layer.masksToBounds = true
         
+        profileImageView.isUserInteractionEnabled = true
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleProfileImageTap))
+        profileImageView.addGestureRecognizer(tap)
+        
         profileImageView.sd_setImage(with: user.profileImageUrl, completed: nil)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
+        
     }
     
 }
